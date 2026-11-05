@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JOBUPDATES — latest job notifications and application deadlines.">
+  <title>JOBUPDATES | Latest Job Notifications</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="index.html" aria-label="JOBUPDATES home"><span class="brand-mark">J</span><span class="brand-word">JOB<span>UPDATES</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#latest">Latest Jobs</a>
+      <a href="#closing">Closing Soon</a>
+    </nav>
+    <a class="header-cta" href="#latest">Explore Jobs <span>→</span></a>
+  </div>
+</header>
+
+<main class="content-wrap">
+  <div class="main-column">
+    <section id="latest" class="feed-section">
+      <div class="section-title">
+        <div><span class="eyebrow">RECENTLY PUBLISHED</span><h2>Latest Jobs</h2><p>Newly added job notifications.</p></div>
+        <span class="section-count">LATEST UPDATES</span>
+      </div>
+      <div id="latestJobs" class="job-feed">Loading latest jobs...</div>
+    </section>
+
+    <section id="closing" class="feed-section">
+      <div class="section-title">
+        <div><span class="eyebrow">DON'T MISS OUT</span><h2>Closing Soon</h2><p>Active opportunities with deadlines in the next 14 days.</p></div>
+        <span class="section-count deadline-count">UPCOMING DEADLINES</span>
+      </div>
+      <div id="closingJobs" class="job-feed">Loading deadlines...</div>
+    </section>
+  </div>
+
+  <aside class="sidebar">
+    <section class="side-panel follow-panel">
+      <h3>About JOBUPDATES</h3>
+      <p>We bring job notifications together so you can quickly check the role, eligibility, deadline and official application details.</p>
+      <div class="side-highlight"><span>✓</span> Government, private & internship updates</div>
+      <div class="side-highlight"><span>✓</span> Important application dates</div>
+      <div class="side-highlight"><span>✓</span> Official links when available</div>
+    </section>
+    <section class="side-panel reminder-panel">
+      <h3>Before you apply</h3>
+      <p>Always read the official notification. Check eligibility, age limit, fees and last date on the recruiting organisation's website.</p>
+      <a href="#latest">Browse job updates →</a>
+    </section>
+  </aside>
+</main>
+
+<footer class="site-footer">
+  <a class="brand" href="index.html"><span class="brand-mark">J</span><span class="brand-word">JOB<span>UPDATES</span></span></a>
+  <p>Simple, timely job updates for your next opportunity.</p>
+  <small>© <span id="year"></span> JOBUPDATES</small>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

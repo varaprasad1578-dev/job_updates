@@ -1,0 +1,48 @@
+backend:
+  name: github
+  repo: varaprasad1578-dev/job_updates
+  branch: main
+
+# Local testing only: run the Decap proxy before opening /admin/.
+local_backend: true
+
+media_folder: "uploads"
+public_folder: "/uploads"
+
+# Keep all job records in jobs.json so the existing website can display them.
+collections:
+  - name: "job_updates"
+    label: "Job Updates"
+    files:
+      - name: "jobs"
+        label: "All Jobs"
+        file: "jobs.json"
+        fields:
+          - label: "Job Listings"
+            name: "jobs"
+            widget: "list"
+            summary: "{{fields.role}} — {{fields.organization}}"
+            fields:
+              - { label: "Unique ID", name: "id", widget: "string", hint: "Use a unique value, e.g. job-2026-001" }
+              - label: "Job Type"
+                name: "type"
+                widget: "select"
+                options:
+                  - { label: "Government Job", value: "government" }
+                  - { label: "Private Job", value: "private" }
+                  - { label: "Internship", value: "internship" }
+              - { label: "Job Role / Title", name: "role", widget: "string" }
+              - { label: "Organization", name: "organization", widget: "string" }
+              - { label: "Qualification", name: "qualification", widget: "string" }
+              - { label: "Salary / Stipend", name: "salary", widget: "string", required: false }
+              - { label: "Last Date", name: "lastDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: "Posted Date", name: "postedDate", widget: "datetime", date_format: "YYYY-MM-DD", time_format: false, format: "YYYY-MM-DD" }
+              - { label: "Official Apply Link", name: "applyLink", widget: "string", required: false }
+              - { label: "Official Notification Link", name: "notificationLink", widget: "string", required: false }
+              - label: "Status"
+                name: "status"
+                widget: "select"
+                options:
+                  - { label: "Active", value: "active" }
+                  - { label: "Inactive", value: "inactive" }
+              - { label: "Job Description", name: "description", widget: "text" }
